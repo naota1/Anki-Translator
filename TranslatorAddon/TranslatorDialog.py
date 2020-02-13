@@ -1,6 +1,6 @@
 from aqt.qt import *
 from aqt.utils import tooltip
-from AnkiTranslator.TranslatorAddon.Parser.PONSParser import PONSParser
+from .Parser.PONSParser import PONSParser
 
 # This class describes the Dialog Window in which a vocable can be translated
 class TranslatorDialog(QDialog):
