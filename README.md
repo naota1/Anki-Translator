@@ -1,4 +1,4 @@
-# Anki-Translator
+# Anki-Translator (Forked and updated to Anki 2.1)
 ######v1.1
 Anki-Translator is a Add-On for the flashcard program [Anki](http://ankisrs.net/).
 
@@ -47,14 +47,14 @@ The chosen translations get copied on your flashcard.
 
 ## Default Values
 You can change the default values for source and target language and also for the grammar infos. Just change the values 
-of the variables in the file 'Translator.py'. You can find the file in the Add-Ons Folder of your Anki Installation.
+of the variables in the file '__init__.py'. You can find the file in the Add-Ons Folder of your Anki Installation.
 
 ![alt tag](https://raw.githubusercontent.com/jannewulf/Anki-Translator/master/docs/settings.png)
 
 (See the highlighted lines.)
 
 ## Installation
-This Add-On is also posted on the [Anki Add-Ons Website](https://ankiweb.net/shared/info/300631469/). You can use the Add-On Installer, which is integrated into Anki, to install the Translator. 
-The Downloadcode is '300631469'.
+This Add-On is also posted on the [Anki Add-Ons Website]. You can use the Add-On Installer, which is integrated into Anki, to install the Translator. 
 
-Or you can download this project and copy the 'Translator.py' file and the 'TranslatorAddon' folder into your Anki Add-On directory.
+
+Or you can download this project as a zip and uncompress the folder into your Anki Addon folder (../addons21/Anki-Translator-master).
