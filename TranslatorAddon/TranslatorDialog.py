@@ -30,7 +30,7 @@ class TranslatorDialog(QDialog):
         # Set up window
         self.setWindowTitle("Translator")
         self.setModal(True)
-        self.resize(800, 600)
+        self.resize(1024, 768)
 
         self.createSettings()
 
@@ -163,9 +163,9 @@ class TranslatorDialog(QDialog):
         for i in range(rows):
             if self.tableTranslations.item(i, 0).checkState() == Qt.Checked:
                 self.translations.append(
-                    [self.tableTranslations.item(i, 1).text(),
-                    self.tableTranslations.item(i, 2).text()])
-
+                    [self.tableTranslations.item(i, 2).text(),
+                     self.tableTranslations.item(i, 1).text()])
+        print(self.translations)
         self.accept()
 
 

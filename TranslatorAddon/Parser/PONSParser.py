@@ -18,7 +18,7 @@ class PONSParser(Parser):
         search = quote_plus(str(searchTerm))
         src = quote_plus(sourceLang)
         combo = quote_plus(self.sourceTargetPairs[sourceLang][targetLang])
-        return "http://en.pons.com/translate?q=" + search + "&l=" + combo + "&in=" + src + "&lf=" + src
+        return "http://en.pons.com/translate?q=" + search + "&l=" + combo + "&in=" + src + "&lf=" + src + "&fm=1"
 
 
     def getTranslation(self, searchTerm, sourceLang, targetLang, loadGrammarInfos):
