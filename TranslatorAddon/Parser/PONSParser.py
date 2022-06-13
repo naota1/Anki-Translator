@@ -1,6 +1,7 @@
 from .Parser import Parser
 from urllib.parse import quote_plus
 from html.parser import HTMLParser
+import html
 import xml.etree.ElementTree as ET
 import os
 import re
@@ -29,14 +30,15 @@ class PONSParser(Parser):
 
         hp = HTMLParser()
 
+
         if not loadGrammarInfos:
             [s.extract() for s in doc.findAll("span", {"class" : re.compile(self.exceptSpans)})]
 
         sources = doc.findAll("div", {"class" : re.compile("^source$")})
         targets = doc.findAll("div", {"class" : re.compile("^target( rtl)?$")})
         for i in range(len(sources)):
-            source = hp.unescape("".join(sources[i].findAll(text=True)).strip())
-            target = hp.unescape("".join(targets[i].findAll(text=True)).strip())
+            source = html.unescape("".join(sources[i].findAll(text=True)).strip())
+            target = html.unescape("".join(targets[i].findAll(text=True)).strip())
             translations.append([source, target])
 
         return translations

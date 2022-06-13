@@ -21,10 +21,11 @@
 
 from . import TranslatorAddon
 
+
 # Here you can set the default Languages.
 # For available Language Codes you can see TranslatorAddon/Parser/pons_lang_codes.xml
-TranslatorAddon.defaultSourceLanguage = "fr"
-TranslatorAddon.defaultTargetLanguage = "de"
+TranslatorAddon.defaultSourceLanguage = "de"
+TranslatorAddon.defaultTargetLanguage = "en"
 TranslatorAddon.defaultLoadGrammarInfos = False
 
 TranslatorAddon.__init__()
