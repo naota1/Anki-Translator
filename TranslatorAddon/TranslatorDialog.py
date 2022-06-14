@@ -163,8 +163,8 @@ class TranslatorDialog(QDialog):
         for i in range(rows):
             if self.tableTranslations.item(i, 0).checkState() == Qt.Checked:
                 self.translations.append(
-                    [self.tableTranslations.item(i, 2).text(),
-                     self.tableTranslations.item(i, 1).text()])
+                    [self.tableTranslations.item(i, 2).text() + '<br>'+ '<br>',
+                     self.tableTranslations.item(i, 1).text()+ '<br>'+ '<br>'])
         print(self.translations)
         self.accept()
 

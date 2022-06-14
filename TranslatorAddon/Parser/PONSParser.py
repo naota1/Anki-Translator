@@ -11,7 +11,8 @@ class PONSParser(Parser):
     def __init__(self):
         self.langKeys = {}
         self.sourceTargetPairs = {}
-        self.exceptSpans = "^genus$|^style$|^case$|^rhetoric$|^region$|^number$|^topic$|^category$|^perf$|^target$|^info$"
+        # self.exceptSpans = "^genus$|^style$|^case$|^rhetoric$|^region$|^number$|^topic$|^category$|^perf$|^target$|^info$"
+        self.exceptSpans = "^style$|^case$|^rhetoric$|^region$|^number$|^topic$|^category$|^perf$|^target$|^info$"
         self.parseLangXML()
 
     def createUrl(self, searchTerm, sourceLang, targetLang):
@@ -36,9 +37,24 @@ class PONSParser(Parser):
 
         sources = doc.findAll("div", {"class" : re.compile("^source$")})
         targets = doc.findAll("div", {"class" : re.compile("^target( rtl)?$")})
+
+        genus= ''
+        genus = doc.find("span", {"class": re.compile("^genus$")})
+        genus = html.unescape("".join(genus.findAll(text=True)).strip())
+        print(genus)
+
+        print(sources)
+        print(targets)
+        j = 0
         for i in range(len(sources)):
+
             source = html.unescape("".join(sources[i].findAll(text=True)).strip())
             target = html.unescape("".join(targets[i].findAll(text=True)).strip())
+
+            while j == 1:
+                source = "(" + genus + ") " + source
+                break
+            j+=1
             translations.append([source, target])
 
         return translations
