@@ -104,8 +104,8 @@ class TranslatorDialog(QDialog):
         self.tableTranslations.horizontalHeader().resizeSection(1, (self.tableTranslations.size().width() - self.col0Width) / 2)
         self.tableTranslations.verticalHeader().hide()
         policy = QSizePolicy()
-        policy.setHorizontalPolicy(policy.Expanding)
-        policy.setVerticalPolicy(policy.Expanding)
+        policy.setHorizontalPolicy(policy.Policy.Expanding)
+        policy.setVerticalPolicy(policy.Policy.Expanding)
         policy.setVerticalStretch(1)
         self.tableTranslations.setSizePolicy(policy)
 
