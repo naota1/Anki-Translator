@@ -1,5 +1,11 @@
-# Anki-Translator (Forked and updated to Anki 2.1)
-######v1.1
+# Anki-Translator (Forked and updated to Anki 2.1.54+)
+
+Works on config:
+Anki 2.1.54 (b6a7760c) Python 3.9.7 Qt 6.3.1 PyQt 6.3.1
+Platform: Mac 12.5.1
+Flags: frz=True ao=True sv=2
+
+
 Anki-Translator is a Add-On for the flashcard program [Anki](http://ankisrs.net/).
 
 This Add-On translates vocabularies for you. So if you want to add a new flashcard to your deck you can open this Add-On 
@@ -54,7 +60,5 @@ of the variables in the file '__init__.py'. You can find the file in the Add-Ons
 (See the highlighted lines.)
 
 ## Installation
-This Add-On is also posted on the [Anki Add-Ons Website]. You can use the Add-On Installer, which is integrated into Anki, to install the Translator. 
 
-
-Or you can download this project as a zip and uncompress the folder into your Anki Addon folder (../addons21/Anki-Translator-master).
+Download this project as a zip and uncompress the folder into your Anki Addon folder (../addons21/Anki-Translator-master).
