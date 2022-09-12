@@ -60,7 +60,5 @@ of the variables in the file '__init__.py'. You can find the file in the Add-Ons
 (See the highlighted lines.)
 
 ## Installation
-This Add-On is also posted on the [Anki Add-Ons Website]. You can use the Add-On Installer, which is integrated into Anki, to install the Translator. 
 
-
-Or you can download this project as a zip and uncompress the folder into your Anki Addon folder (../addons21/Anki-Translator-master).
+Download this project as a zip and uncompress the folder into your Anki Addon folder (../addons21/Anki-Translator-master).
